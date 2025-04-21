@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  orders-app:
+    build:
+      context: .
+    ports:
+      - "8080:8083"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/ordersdb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: 147896325
+    depends_on:
+      - mysql
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  mysql:
+    image: mysql:8.0
+    container_name: DBConteneur
+    ports:
+      - "3307:3306"  # Port externe 3307, port interne 3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 147896325
+      MYSQL_DATABASE: ordersdb
+    volumes:
+      - ./data:/docker-entrypoint-initdb.d  # scripts SQL init si besoin
+      - pgdata:/var/lib/mysql
+    networks:
+      - app-network
+
+volumes:
+  pgdata:
+
+networks:
+  app-network:
+    driver: bridge
