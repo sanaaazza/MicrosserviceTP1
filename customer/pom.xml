@@ -20,9 +20,12 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> origin/main
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -35,8 +38,11 @@
             <scope>runtime</scope>
         </dependency>
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/main
         <!-- Lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -50,11 +56,14 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+<<<<<<< HEAD
         <!-- Spring Boot -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+=======
+>>>>>>> origin/main
         <!-- OpenFeign -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -75,7 +84,10 @@
         </dependency>
     </dependencies>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
     <build>
         <plugins>
             <!-- Spring Boot Plugin with mainClass -->

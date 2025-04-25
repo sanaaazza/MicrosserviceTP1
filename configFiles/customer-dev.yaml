@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-spring:
-  application:
-    name: customer  # correspond à customer-dev.yml dans le repo Git
-
-  profiles:
-    active: dev  # profil actif
-
-  config:
-    import: "configserver:"  # <-- syntaxe correcte ici
-
-  cloud:
-    config:
-      uri: http://localhost:8888  # l’URL de ton Config Server
-      fail-fast: true
-=======
 server:
-  port: 8081
+  port: 8089
 
 spring:
   application:
@@ -40,7 +24,7 @@ spring:
     config:
       uri: http://localhost:8888
       enabled: true
-      profile:
+      profile: dev
   config:
     import: optional:configserver:http://localhost:8888
 eureka:
@@ -56,4 +40,3 @@ management:
     web:
       exposure:
         include: "*"
->>>>>>> origin/main
