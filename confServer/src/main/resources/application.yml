@@ -3,25 +3,16 @@ server:
 
 spring:
   application:
-<<<<<<< HEAD
-    name: confServer
-=======
-    name: confServer  # Remplacez par le nom de votre application
->>>>>>> origin/main
 
+    name: confServer
   cloud:
     config:
       server:
         git:
-<<<<<<< HEAD
+
           uri: https://github.com/sanaaazza/MicrosserviceTP1
           searchPaths: configFiles
           default-label: main  # branche à utiliser
           cloneOnStart: true
-=======
-          uri: https://github.com/ton-utilisateur/ton-depot.git  # Remplacez par l'URL de ton dépôt GitHub
-          searchPaths: configFiles  # Le dossier contenant les fichiers de configuration dans le dépôt
-          cloneOnStart: true  # Cela permet de cloner le dépôt à chaque démarrage du serveur de configuration
-          username:   # Si nécessaire, ajoute tes informations d'authentification
-          password:
->>>>>>> origin/main
+
+
